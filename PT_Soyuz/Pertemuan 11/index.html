@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halo Muel</title>
+    <style>
+        body {
+            background-color: black;
+            color: blueviolet;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 200px;
+        }
+        #judul {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: blue;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="judul">HALLO</div>
+    <button onclick="tambahNama()">Tambah</button>
+
+    <script>
+        function tambahNama() {
+            document.getElementById("judul").innerHTML = "TEKS";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!-- Halaman Beranda (index.html) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Kesehatan Mental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">Kemenkes</div>
+    <nav class="main-nav">
+      <a href="index.html">Beranda</a>
+      <a href="tips.html">Tips</a>
+      <a href="tentang.html">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Kumpulan Informasi Penting untuk Kesehatan Mental</h1>
+    <img src="mental-health.jpg" alt="Ilustrasi Kesehatan Mental">
+    <p>
+      Kesehatan mental adalah fondasi utama dalam kehidupan manusia. Menjaganya berarti
+      memperkuat daya tahan diri terhadap stres, tekanan hidup, dan tantangan sehari-hari.
+      Mari tingkatkan kesadaran dan kepedulian terhadap pentingnya kesehatan mental.
+    </p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Kesehatan Mental Indonesia
+  </footer>
+</body>
+</html>
+
+<!-- Halaman Tips (tips.html) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips Kesehatan Mental</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">Kemenkes</div>
+    <nav class="main-nav">
+      <a href="index.html">Beranda</a>
+      <a href="tips.html">Tips</a>
+      <a href="tentang.html">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section class="tips">
+    <h2>Pilih Tingkat Stres Anda</h2>
+    <div class="buttons">
+      <button onclick="tampilkanTips('rendah')">Stres Ringan</button>
+      <button onclick="tampilkanTips('sedang')">Stres Sedang</button>
+      <button onclick="tampilkanTips('tinggi')">Stres Berat</button>
+    </div>
+
+    <div id="motivasi"></div>
+    <div id="tips"></div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Kesehatan Mental Indonesia
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Halaman Tentang (tentang.html) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">Kemenkes</div>
+    <nav class="main-nav">
+      <a href="index.html">Beranda</a>
+      <a href="tips.html">Tips</a>
+      <a href="tentang.html">Tentang Kami</a>
+    </nav>
+  </header>
+
+  <section class="tentang">
+    <h2>Tentang Kami</h2>
+    <p>
+      Website ini bertujuan menyebarkan edukasi terkait kesehatan mental kepada masyarakat umum.
+      Kami percaya bahwa informasi yang tepat, mudah dipahami, dan aksesibel adalah langkah awal
+      menuju kehidupan yang lebih sehat secara mental dan emosional.
+    </p>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 Kesehatan Mental Indonesia
+  </footer>
+</body>
+</html>
+
+<!-- CSS (style.css) -->
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.main-header {
+  background-color: #00796b;
+  padding: 15px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.hero, .tips, .tentang {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+  background: #009688;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* script.js */
+function tampilkanTips(level) {
+  const motivasi = document.getElementById("motivasi");
+  const tips = document.getElementById("tips");
+
+  motivasi.innerHTML = `
+    <p><strong>Kata-kata Penyemangat:</strong> Tidak apa-apa merasa lelah. Kamu sedang berproses dan itu butuh waktu. Kamu kuat, kamu berarti, dan kamu tidak sendirian.</p>
+  `;
+
+  let isiTips = "";
+
+  if (level === "rendah") {
+    isiTips = `
+      <ul>
+        <li>Lakukan aktivitas ringan seperti berjalan kaki.</li>
+        <li>Dengarkan musik menenangkan.</li>
+        <li>Atur jadwal istirahat dengan baik.</li>
+      </ul>`;
+  } else if (level === "sedang") {
+    isiTips = `
+      <ul>
+        <li>Berbagi cerita dengan orang terpercaya.</li>
+        <li>Luangkan waktu untuk diri sendiri.</li>
+        <li>Lakukan teknik relaksasi seperti pernapasan dalam.</li>
+      </ul>`;
+  } else if (level === "tinggi") {
+    isiTips = `
+      <ul>
+        <li>Segera hubungi layanan konseling atau psikolog profesional.</li>
+        <li>Jangan memaksakan diri untuk produktif.</li>
+        <li>Fokus pada satu hal kecil yang bisa kamu lakukan hari ini.</li>
+      </ul>`;
+  }
+
+  tips.innerHTML = `<h3>Tips untuk Anda:</h3>` + isiTips;
+}

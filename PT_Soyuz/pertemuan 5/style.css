@@ -1,0 +1,38 @@
+h1{
+    color:rgb(0, 179, 255);
+    font-size: 50px; 
+}
+
+p{
+    color: pink;
+    font-size: 30px;
+}
+
+.p1{
+    color: blueviolet;
+    font-size: 30px;
+}
+
+.bg-teal {
+    background-color: red;
+}
+
+#p2{
+    color:antiquewhite;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input[type=text]{
+    background-color: blue;
+}
+
+
+button:hover{ 
+   background-color:rgb(255, 196, 0)
+}
+
+h2::first-letter {
+    color:rgb(176, 4, 15);
+    font-size: 50px;
+}
